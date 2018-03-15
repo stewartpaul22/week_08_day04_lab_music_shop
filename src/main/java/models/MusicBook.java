@@ -3,9 +3,10 @@ package models;
 import behaviours.ISell;
 
 public class MusicBook implements ISell {
-    String title;
-    int buyPrice;
-    int sellPrice;
+
+    private String title;
+    private int buyPrice;
+    private int sellPrice;
 
     public MusicBook(String title, int buyPrice, int sellPrice) {
         this.title = title;
