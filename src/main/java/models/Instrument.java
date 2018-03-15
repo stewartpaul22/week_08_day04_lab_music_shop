@@ -69,5 +69,5 @@ public abstract class Instrument implements IPlay, ISell {
         this.sellPrice = sellPrice;
     }
 
-    
+
 }
