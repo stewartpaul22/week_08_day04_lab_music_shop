@@ -1,6 +1,13 @@
 package models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "pianos")
 public class Piano extends Instrument {
+
     private String manufacturer;
 
     public Piano(String manufacturer, String colour, int buyPrice, int sellPrice) {
@@ -10,8 +17,13 @@ public class Piano extends Instrument {
         this.sellPrice = sellPrice;
     }
 
+    @Column(name = "manufacturer")
     public String getManufacturer() {
-        return this.manufacturer;
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
     }
 
     public int calculateMarkup() {
